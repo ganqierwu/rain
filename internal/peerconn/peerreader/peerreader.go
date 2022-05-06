@@ -96,6 +96,11 @@ func (p *PeerReader) Run() {
 			}
 		}
 	}()
+	defer func() {
+		if r := recover(); r != nil {
+			err = io.ErrUnexpectedEOF
+		}
+	}
 
 	for {
 		err = p.conn.SetReadDeadline(time.Now().Add(readTimeout))
@@ -301,7 +306,7 @@ func (p *PeerReader) readPiece(length uint32) (buf bufferpool.Buffer, err error)
 		return
 	}
 }
-
+var errOccurred = errors.New("an error occurred")
 var errStoppedWhileWaitingBucket = errors.New("peer reader stopped while waiting for bucket")
 
 type blockSizeError struct {
