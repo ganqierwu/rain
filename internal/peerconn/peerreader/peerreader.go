@@ -10,10 +10,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/cenkalti/rain/internal/bufferpool"
-	"github.com/cenkalti/rain/internal/logger"
-	"github.com/cenkalti/rain/internal/peerprotocol"
-	"github.com/cenkalti/rain/internal/piece"
+	"github.com/ganqierwu/rain/internal/bufferpool"
+	"github.com/ganqierwu/rain/internal/logger"
+	"github.com/ganqierwu/rain/internal/peerprotocol"
+	"github.com/ganqierwu/rain/internal/piece"
 	"github.com/juju/ratelimit"
 )
 
@@ -100,7 +100,7 @@ func (p *PeerReader) Run() {
 		if r := recover(); r != nil {
 			err = io.ErrUnexpectedEOF
 		}
-	}
+	}()
 
 	for {
 		err = p.conn.SetReadDeadline(time.Now().Add(readTimeout))
@@ -306,6 +306,7 @@ func (p *PeerReader) readPiece(length uint32) (buf bufferpool.Buffer, err error)
 		return
 	}
 }
+
 var errOccurred = errors.New("an error occurred")
 var errStoppedWhileWaitingBucket = errors.New("peer reader stopped while waiting for bucket")
 

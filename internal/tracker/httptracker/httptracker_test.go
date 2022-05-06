@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cenkalti/rain/internal/tracker"
-	"github.com/cenkalti/rain/internal/tracker/httptracker"
 	fhttp "github.com/chihaya/chihaya/frontend/http"
 	"github.com/chihaya/chihaya/middleware"
 	"github.com/chihaya/chihaya/storage"
 	_ "github.com/chihaya/chihaya/storage/memory"
+	"github.com/ganqierwu/rain/internal/tracker"
+	"github.com/ganqierwu/rain/internal/tracker/httptracker"
 )
 
 const timeout = 2 * time.Second

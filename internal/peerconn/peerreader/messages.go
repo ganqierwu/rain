@@ -1,8 +1,8 @@
 package peerreader
 
 import (
-	"github.com/cenkalti/rain/internal/bufferpool"
-	"github.com/cenkalti/rain/internal/peerprotocol"
+	"github.com/ganqierwu/rain/internal/bufferpool"
+	"github.com/ganqierwu/rain/internal/peerprotocol"
 )
 
 // Piece message that is read from peers.

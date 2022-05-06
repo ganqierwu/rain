@@ -3,9 +3,9 @@ package piecepicker
 import (
 	"testing"
 
-	"github.com/cenkalti/rain/internal/bitfield"
-	"github.com/cenkalti/rain/internal/peer"
-	"github.com/cenkalti/rain/internal/piece"
+	"github.com/ganqierwu/rain/internal/bitfield"
+	"github.com/ganqierwu/rain/internal/peer"
+	"github.com/ganqierwu/rain/internal/piece"
 	"github.com/stretchr/testify/assert"
 )
 

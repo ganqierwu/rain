@@ -10,12 +10,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cenkalti/rain/internal/magnet"
-	"github.com/cenkalti/rain/internal/metainfo"
-	"github.com/cenkalti/rain/internal/resumer"
-	"github.com/cenkalti/rain/internal/resumer/boltdbresumer"
-	"github.com/cenkalti/rain/internal/storage/filestorage"
-	"github.com/cenkalti/rain/internal/webseedsource"
+	"github.com/ganqierwu/rain/internal/magnet"
+	"github.com/ganqierwu/rain/internal/metainfo"
+	"github.com/ganqierwu/rain/internal/resumer"
+	"github.com/ganqierwu/rain/internal/resumer/boltdbresumer"
+	"github.com/ganqierwu/rain/internal/storage/filestorage"
+	"github.com/ganqierwu/rain/internal/webseedsource"
 	"github.com/gofrs/uuid"
 	"github.com/nictuku/dht"
 )

@@ -11,13 +11,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cenkalti/rain/internal/logger"
-	"github.com/cenkalti/rain/internal/webseedsource"
 	fhttp "github.com/chihaya/chihaya/frontend/http"
 	"github.com/chihaya/chihaya/middleware"
 	"github.com/chihaya/chihaya/storage"
 	_ "github.com/chihaya/chihaya/storage/memory"
 	"github.com/fortytw2/leaktest"
+	"github.com/ganqierwu/rain/internal/logger"
+	"github.com/ganqierwu/rain/internal/webseedsource"
 )
 
 var (

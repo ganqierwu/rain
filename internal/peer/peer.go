@@ -6,19 +6,19 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cenkalti/rain/internal/bitfield"
-	"github.com/cenkalti/rain/internal/fast"
-	"github.com/cenkalti/rain/internal/logger"
-	"github.com/cenkalti/rain/internal/mse"
-	"github.com/cenkalti/rain/internal/peerconn"
-	"github.com/cenkalti/rain/internal/peerconn/peerreader"
-	"github.com/cenkalti/rain/internal/peerconn/peerwriter"
-	"github.com/cenkalti/rain/internal/peerprotocol"
-	"github.com/cenkalti/rain/internal/peersource"
-	"github.com/cenkalti/rain/internal/pexlist"
-	"github.com/cenkalti/rain/internal/piece"
-	"github.com/cenkalti/rain/internal/sliceset"
-	"github.com/cenkalti/rain/internal/stringutil"
+	"github.com/ganqierwu/rain/internal/bitfield"
+	"github.com/ganqierwu/rain/internal/fast"
+	"github.com/ganqierwu/rain/internal/logger"
+	"github.com/ganqierwu/rain/internal/mse"
+	"github.com/ganqierwu/rain/internal/peerconn"
+	"github.com/ganqierwu/rain/internal/peerconn/peerreader"
+	"github.com/ganqierwu/rain/internal/peerconn/peerwriter"
+	"github.com/ganqierwu/rain/internal/peerprotocol"
+	"github.com/ganqierwu/rain/internal/peersource"
+	"github.com/ganqierwu/rain/internal/pexlist"
+	"github.com/ganqierwu/rain/internal/piece"
+	"github.com/ganqierwu/rain/internal/sliceset"
+	"github.com/ganqierwu/rain/internal/stringutil"
 	"github.com/juju/ratelimit"
 	"github.com/rcrowley/go-metrics"
 )
@@ -68,7 +68,7 @@ type Peer struct {
 
 	closeC chan struct{}
 	doneC  chan struct{}
-	
+
 	// In some situation the closeC channel is closed twice which create a panic
 	// Prevent this by using a sync object which will ever close the channel once
 	once sync.Once
@@ -137,9 +137,9 @@ func (p *Peer) Close() {
 
 // Close the closeC channel safely
 func (p *Peer) SafeClose() {
-       p.once.Do(func() {
-               close(p.closeC)
-       })
+	p.once.Do(func() {
+		close(p.closeC)
+	})
 }
 
 // Done returns a channel that is closed when a peers run loop is ended.

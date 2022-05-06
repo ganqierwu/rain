@@ -5,10 +5,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/cenkalti/rain/internal/logger"
-	"github.com/cenkalti/rain/internal/peerconn/peerreader"
-	"github.com/cenkalti/rain/internal/peerconn/peerwriter"
-	"github.com/cenkalti/rain/internal/peerprotocol"
+	"github.com/ganqierwu/rain/internal/logger"
+	"github.com/ganqierwu/rain/internal/peerconn/peerreader"
+	"github.com/ganqierwu/rain/internal/peerconn/peerwriter"
+	"github.com/ganqierwu/rain/internal/peerprotocol"
 	"github.com/juju/ratelimit"
 )
 

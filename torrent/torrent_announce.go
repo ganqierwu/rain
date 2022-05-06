@@ -3,7 +3,7 @@ package torrent
 import (
 	"math"
 
-	"github.com/cenkalti/rain/internal/tracker"
+	"github.com/ganqierwu/rain/internal/tracker"
 )
 
 func (t *torrent) handleNewTrackers(trackers []tracker.Tracker) {

@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"hash"
 
-	"github.com/cenkalti/rain/internal/allocator"
-	"github.com/cenkalti/rain/internal/filesection"
-	"github.com/cenkalti/rain/internal/metainfo"
+	"github.com/ganqierwu/rain/internal/allocator"
+	"github.com/ganqierwu/rain/internal/filesection"
+	"github.com/ganqierwu/rain/internal/metainfo"
 	"golang.org/x/exp/constraints"
 )
 

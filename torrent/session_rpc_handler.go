@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cenkalti/rain/internal/resumer/boltdbresumer"
-	"github.com/cenkalti/rain/internal/rpctypes"
+	"github.com/ganqierwu/rain/internal/resumer/boltdbresumer"
+	"github.com/ganqierwu/rain/internal/rpctypes"
 	"github.com/powerman/rpc-codec/jsonrpc2"
 )
 

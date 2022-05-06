@@ -6,8 +6,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/cenkalti/rain/internal/logger"
-	"github.com/cenkalti/rain/internal/mse"
+	"github.com/ganqierwu/rain/internal/logger"
+	"github.com/ganqierwu/rain/internal/mse"
 )
 
 // Accept BitTorrent handshake from the connection. Handles encryption.
