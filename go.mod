@@ -1,4 +1,4 @@
-module github.com/ganqierwu/rain
+module github.com/cenkalti/rain
 
 go 1.18
 
